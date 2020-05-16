@@ -24,4 +24,12 @@ File name: Ninjutsu-v1.0.iso
 * Nama pengguna : Administrator
 * Kata Laluan : toor
 
+_______________________________________________________________________________________________________________________
+
+> **Adani Kamal**
+
+**LinkedIn** : https://www.linkedin.com/in/adani-kamal-65574a12a/
+
+**GitHub** : https://github.com/AdaniKamal
+
 Alihan bahasa oleh **_Adani Kamal_**
