@@ -1,6 +1,8 @@
 # Dokumentasi
 
-Alihan ke Bahasa Melayu. Website asal adalah dalam Bahasa Inggeris boleh didapati disini **https://ninjutsu-os.github.io/docs/**
+Alihan ke Bahasa Melayu. 
+
+Website asal adalah dalam Bahasa Inggeris boleh didapati disini **https://ninjutsu-os.github.io/docs/**
 
 ## Ninjutsu OS
 
