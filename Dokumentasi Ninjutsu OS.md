@@ -291,7 +291,7 @@ bcdedit /set {current} description Windows 10 Pro"
 ![image](https://user-images.githubusercontent.com/44063862/82115012-c8e9b400-9792-11ea-96bf-2c37a74078de.png)
 
 
-## How To Install Ninjutsu OS in VMware Workstation :
+## Cara Memasang sistem pengendalian Ninjutsu di VMware Workstation :
 
 ![image](https://user-images.githubusercontent.com/44063862/82115342-d3a54880-9794-11ea-9411-d74f90653310.png)
 
@@ -328,7 +328,7 @@ bcdedit /set {current} description Windows 10 Pro"
 ![image](https://user-images.githubusercontent.com/44063862/82115413-1cf59800-9795-11ea-9c4b-d64bb0feb5eb.png)
 
 
-## How To Install Ninjutsu OS in Oracle VM VirtualBox :
+## Cara Memasang sistem pengendalian Ninjutsu di Oracle VM VirtualBox :
 
 ![image](https://user-images.githubusercontent.com/44063862/82115441-60e89d00-9795-11ea-9f6b-aaa4fe2ba982.png)
 
