@@ -252,22 +252,22 @@ Now write this command to check defult profile and currnet profile windows
 
 Sekarang tulis arahan ini untuk memeriksa tetingkap profil tetapan asal dan profil semasa
 
-BCDEdit ialah 
+BCDEdit ialah alat baris perintah (CL) yang digunakan untuk "Boot Configuration Data"(BCD)
 
-BCDEdit is a command-line tool for managing Boot Configuration Data (BCD).
+Fail BCD menyediakan ruang yang digunakan untuk menerangkan aplikasi boot dan tetapan aplikasi boot.
 
-BCD files provide a store that is used to describe boot applications and boot application settings.
+BCDEdit 
+BCDEdit dapat digunakan untuk berbagai tujuan, termasuk membuat ruang baru, mengubahsuai ruang yang ada, menambahkan pilihan menu boot, dan sebagainya.
 
-BCDEdit can be used for a variety of purposes, including creating new stores, modifying existing stores, adding boot menu options, and so on.
+Anda memerlukan hak pentadbiran untuk menggunakan BCDEdit untuk mengubah BCD
 
-You’ll need administrative privileges to use BCDEdit to modify BCD
-
-open your cmd as administrator
+buka cmd anda sebagai pentadbir
 
 ```
 bcdedit 
 ```
-Boot Options Identifiers :
+
+Pengecam Pilihan Boot:
 
 ```
 {default} device partion E:  (Ninjutso OS)
@@ -275,15 +275,20 @@ Boot Options Identifiers :
 {current} device partion C: (your current system )
 ```
 
+![image](https://user-images.githubusercontent.com/44063862/82114937-46f98b00-9792-11ea-800c-3a31cf5f4efe.png)
 
+Sekarang kita perlu mengubah penerangan boot. Ketika digunakan, OS baru mempunyai ID {tetapan asal}. Untuk menamakan semula, berikan penerangan yang lebih baik, gunakan arahan berikut:
 
+```
+bcdedit /set {default} description "Ninjutsu OS"
+bcdedit /set {current} description Windows 10 Pro"
+```
 
+![image](https://user-images.githubusercontent.com/44063862/82114991-b0799980-9792-11ea-8b3e-765aaade9808.png)
 
+![image](https://user-images.githubusercontent.com/44063862/82115003-bcfdf200-9792-11ea-83ee-95f9c2a78bfd.png)
 
-
-
-
-
+![image](https://user-images.githubusercontent.com/44063862/82115012-c8e9b400-9792-11ea-96bf-2c37a74078de.png)
 
 
 
