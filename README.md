@@ -101,6 +101,105 @@ Keperluan Sistem Minimum:
 * RAM : 2 GB of RAM DDR3/DDR4
 * Storan : 60 GB ruang cakera keras
 
+**Memasang Ninjutsu sebagai sistem pengendalian pada komputer atau laptop:**
+
+Apa yang anda perlukan:
+
+* Sahkan skema pembahagi anda
+* Pemacu kilat USB bersaiz 32 GB
+* Iso sistem pengendalian Ninjutsu
+* Storan : 60 GB ruang cakera keras (Minimum) (Sistem pengendalian Ninjutsu akan mengambil 53 GB dari jumlah storan yang ada)
+* [Rufus software](https://rufus.ie)
+
+Sebelum anda mula format mesin anda, periksa skema partition cakera anda
+
+**PENTING!** Jangan lupa komputer riba anda termasuk pemasangan windows asal anda, ia dipanggil mod pemulihan atau kilang tetapan semula windows, jadi jangan lakukan tutorial ini jika anda tidak mahu kehilangan windows pemulihan anda, saya cadangkan anda menggunakan **PartitionMagic** untuk memeriksa cakera anda sebelum format.
+
+Anda dapat melihat maklumat ini di alat Pengurusan Cakera yang disertakan dengan Windows. Untuk mengaksesnya, klik-kanan pada menu Start atau tekan kekunci Windows+X dan pilih Pengurusan Cakera. Anda juga boleh menekan Windows+R untuk membuka dialog "Run", taip "diskmgmt.msc" ke dalam kotak, dan tekan kekunci "Enter".
+
+![image](https://user-images.githubusercontent.com/44063862/82113514-24af3f80-9789-11ea-89fd-4230d1496e0b.png)
+
+Pilih Pengurusan Cakera
+
+![image](https://user-images.githubusercontent.com/44063862/82113533-4f999380-9789-11ea-9044-260e3f2cda8c.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113541-5fb17300-9789-11ea-8ccb-41d130c389f9.png)
+
+Cari cakera yang ingin anda periksa di tetingkap Pengurusan Cakera. Klik-kanan dan pilih "Properties."
+
+Klik ke tab "Volume". Di sebelah kanan "Partition style", anda akan nampak "Master Boot Record (MBR)" atau "GUID Partition Table (GPT)", bergantung pada cakera yang digunakan.
+
+![image](https://user-images.githubusercontent.com/44063862/82113584-b5861b00-9789-11ea-8e74-9a7f27093f5a.png)
+
+Muat turun Muat turun perisian Rufus dan plugin atau Pemacu kilat USB
+
+Buka perisian Rufus
+
+![image](https://user-images.githubusercontent.com/44063862/82113609-f54d0280-9789-11ea-821d-c8c4d9b4864d.png)
+
+Dalam contoh kami, kami akan membuat Pemacu kilat USB yang boleh di boot "GPT" yang mengandungi sistem pengendalian Ninjutsu, Jangan mengikuti pelajaran secara membabi buta, mungkin komputer riba/komputer anda adalah MBR, jadi berhati-hatilah.
+
+Sesudah selesai membuat pemacu kilat USB yang boleh di boot, Selepas itu mulakan semula komputer anda dan boot dari pemacu kilat USB.
+
+Gunakan sumber internet untuk mencari Cara Boot dari pemacu kilat USB pada Windows
+
+![image](https://user-images.githubusercontent.com/44063862/82113718-b9ff0380-978a-11ea-978b-a183de800516.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113724-c4210200-978a-11ea-8bdc-40746102764e.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113726-c84d1f80-978a-11ea-8edf-09b5d755858e.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113731-d26f1e00-978a-11ea-9fbe-0c9c6a6ea6d3.png)
+
+**AMARAN** Sekarang berhati-hati saya tidak mahu anda memformat pemacu yang salah dan kehilangan data anda
+
+Tekan kekunci shift+F10 untuk membuka CMD
+
+Kemudian taip arahan berikut:
+
+```
+Diskpart
+List vol
+Dir d:\
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82113806-5c1eeb80-978b-11ea-8fbd-3f2e98cd89ad.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113811-6214cc80-978b-11ea-9430-e4bd9e128f77.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113816-6e992500-978b-11ea-941c-15b439b1f7cb.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113819-722cac00-978b-11ea-8602-d6d1c4e24a18.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113836-84a6e580-978b-11ea-86bc-bdd9858f1c3e.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113840-8bcdf380-978b-11ea-8790-69c340339014.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82113859-a1dbb400-978b-11ea-8f14-33bf7d0302f9.png)
+
+Pemasangan selesai. Tahniah!
+
+Selepas pemasangan mungkin Windows 10 anda akan perlahan dari biasa. Jadi saya cadangkan anda untuk mengemas kini pemacu, anda boleh menggunakan Driver Booster 7 untuk mengemas kini dan mengubah suai komputer riba anda.
+
+[Download](https://www.iobit.com/en/driver-booster.php)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
