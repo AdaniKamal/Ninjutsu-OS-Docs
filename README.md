@@ -1,3 +1,3 @@
 # Alihan bahasa ke Bahasa Melayu
 
-by **_AdaniKamal_**
+by **_Adani Kamal_**
