@@ -360,3 +360,79 @@ bcdedit /set {current} description Windows 10 Pro"
 
 ![image](https://user-images.githubusercontent.com/44063862/82115479-8f667800-9795-11ea-894c-02f210d7ced4.png)
 
+![image](https://user-images.githubusercontent.com/44063862/82115507-cdfc3280-9795-11ea-88d3-5a671e203015.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82115516-d81e3100-9795-11ea-8588-6c8464dcc799.png)
+
+
+### Tingkatkan privasi anda dengan Simple dnscrypt + VPN:
+
+Apakah maklumat yang mungkin akan didedahkan kepada kerajaan/ISP semasa anda melayari Internet? Dan apa jalan penyelesaiannya?
+
+Dalam penggunaan Internet yang biasa, maklumat yang perlu anda jaga:
+
+1. Alamat MAC
+
+2. Permintaan DNS
+
+3. Alamat laman web atau perkhidmatan walaupun dalam sambungan TLS
+
+4. Alamat IP laman web atau perkhidmatan
+
+5. Maklumat yang tidak disulitkan
+
+>  Alamat MAC
+
+Alamat Mac ini dapat mengesan kedudukan anda. Sebaiknya anda mempunyai alamat MAC yang berbeza setiap kali anda menyambung ke Internet. Anda boleh menggunakan pelbagai alat, tetapi di Windows 10, anda boleh mengaktifkannya:
+
+Hidupkan atau Matikan Alamat MAC Perkakasan Rawak untuk Wi-Fi di Windows 10
+
+![image](https://user-images.githubusercontent.com/44063862/82115769-62b36000-9797-11ea-85a8-4cf68d0bb989.png)
+
+Cara lain untuk menukar alamat MAC anda dengan menggunakan perisian seperti
+
+* MAC Address Scanner 5.0 https://www.majorgeeks.com/files/details/mac_address_scanner.html
+* MacMakeup 2.2.3.5 https://www.majorgeeks.com/files/details/mac_makeup.html
+
+
+>  Permintaan DNS
+
+Biasanya, walaupun anda menggunakan 1.1.1.1, permintaan DNS anda dapat didengar dengan mudah. Hanya jika anda menggunakan DNSCrypt atau item lain yang disulitkan, permintaan DNS anda tidak akan didengari.
+
+Anda boleh menggunakan SimpleDNScrypt, ikuti gambar yang ditunjukkan di bawah
+
+![image](https://user-images.githubusercontent.com/44063862/82115832-cfc6f580-9797-11ea-9de0-12b4cbb4f640.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82115834-d6ee0380-9797-11ea-8593-59698e6c8cbc.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82115839-db1a2100-9797-11ea-96b0-c64e3e10ca90.png)
+
+> Alamat laman web atau perkhidmatan walaupun dalam sambungan TLS
+
+Alamat laman web yang anda kunjungi akan dikirim dalam teks biasa melalui SNI, yang dapat didengar. Anda hanya boleh menggunakan proksi atau VPN yang sah untuk menyelesaikan masalah ini.
+
+> Alamat IP laman web atau perkhidmatan
+
+Banyak laman web mempunyai pelayan khusus. Menyumbangkan alamat IP, sama dengan menyumbangkan alamat laman web. Seperti sebelumnya, anda hanya boleh menggunakan proksi atau VPN yang sah untuk menyelesaikan masalah ini.
+
+> Maklumat yang tidak disulitkan
+
+Maklumat yang tidak disulitkan tidak memerlukan penjelasan dan anda harus menggunakan VPN. Tetapi masih ada masalah besar! Apa yang berlaku sekiranya anda memutuskan sambungan VPN secara sengaja atau tidak sengaja?
+
+Ikuti gambar yang ditunjukkan di bawah
+
+![image](https://user-images.githubusercontent.com/44063862/82115991-fb96ab00-9798-11ea-9419-011a428bfc55.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82115995-fe919b80-9798-11ea-8a63-e2e26db4bc5e.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82116002-02252280-9799-11ea-9fbb-e4240593fc87.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82116004-05201300-9799-11ea-8e9c-3da4973eb0dd.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82116006-07826d00-9799-11ea-882e-787844369d17.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82116011-0cdfb780-9799-11ea-923f-d1d8c6cd31ca.png)
+
+
+
+**© AdaniKamal**
