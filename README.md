@@ -4,12 +4,15 @@ Contributing to Ninjutsu OS by [Hasan Al-Qawzai](https://www.linkedin.com/in/alq
 
 ## Alihan bahasa ke Bahasa Melayu
 
-Anda boleh mengikuti social media ini untuk maklumat lebih lanjut mengenai **Ninjutsu OS**
+Anda boleh mengikuti sosial media ini untuk maklumat lebih lanjut mengenai **Ninjutsu OS**
 
-Twitter : https://twitter.com/ninjutsu_os
-Telegram : https://t.me/Ninjutsu_os
-Discord : https://discord.gg/ySmjw9
-GitHub : https://github.com/Ninjutsu-OS/Ninjutsu
+**Twitter** : https://twitter.com/ninjutsu_os
+
+**Telegram** : https://t.me/Ninjutsu_os
+
+**Discord** : https://discord.gg/ySmjw9
+
+**GitHub** : https://github.com/Ninjutsu-OS/Ninjutsu
 
 ## SHA-1 hash/MD5 untuk **Ninjutsu-v1.0.iso**
 
