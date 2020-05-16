@@ -101,7 +101,7 @@ Keperluan Sistem Minimum:
 * RAM : 2 GB of RAM DDR3/DDR4
 * Storan : 60 GB ruang cakera keras
 
-**Memasang Ninjutsu sebagai sistem pengendalian pada komputer atau laptop:**
+### Memasang Ninjutsu sebagai sistem pengendalian pada komputer atau laptop:
 
 Apa yang anda perlukan:
 
@@ -183,18 +183,97 @@ Selepas pemasangan mungkin Windows 10 anda akan perlahan dari biasa. Jadi saya c
 
 [Download](https://www.iobit.com/en/driver-booster.php)
 
+### Dual boot Windows 10,8,7 dengan sistem pengendalian Ninjutsu
 
+Kami akan menerangkan segalanya secara terperinci mengenai "Bagaimana untuk memasang sistem pengendalian Ninjutsu sebagai boot kedua dengan Windows 10,8,7 utama anda.
 
+Keperluan Sistem Minimum:
 
+1- Sistem pengendalian Ninjutsu
 
+2- Pembahagi pemacu yang kosong di dalam mesin anda dengan 55 GB (Minimum) (Sistem pengendalian Ninjutsu akan mengambil 53 GB dari jumlah storan yang ada)
 
+Dalam contoh ini, saya akan memasang sistem pengendalian Ninjutsu pada pembahagi pmacu E:
+Anda hanya perlu menentukan di mana anda ingin memasang sistem operasi lain (sistem pengendalian Ninjutsu) di komputer riba/komputer anda.
 
+Anda dapat melihat maklumat ini di alat Pengurusan Cakera yang disertakan dengan Windows. Untuk mengaksesnya, klik-kanan pada menu Start atau tekan kekunci Windows+X dan pilih Pengurusan Cakera. Anda juga boleh menekan Windows+R untuk membuka dialog "Run", taip "diskmgmt.msc" ke dalam kotak, dan tekan kekunci "Enter".
 
+![image](https://user-images.githubusercontent.com/44063862/82114273-524ab780-978e-11ea-8c92-875d1de8260e.png)
 
+Jika anda tidak mempunyai pembahagi pemacu kosong untuk memasang sistem pengendalian Ninjutsu, anda harus membuat pembahagi pemacu dan memformatnya, dalam tutorial saya pembahagi pemacu Windows 10
 
+Langkah 1: Klik-kanan satu pembahagi pemacu cakera keras dan pilih "Shrink Volume".
 
+![image](https://user-images.githubusercontent.com/44063862/82114368-04827f00-978f-11ea-930c-3f2b78087612.png)
 
+Langkah 2: Masukkan jumlah ruang yang ingin anda kecilkan dalam MB seperti yang ditunjukkan di bawah kemudian klik pada butang "Shrink".
 
+![image](https://user-images.githubusercontent.com/44063862/82114376-1401c800-978f-11ea-8dc1-fbaa132cdb1f.png)
+
+Langkah 3: Klik-kanan pada ruang yang tidak diperuntukkan dan pilih "New Simple Volume".
+
+![image](https://user-images.githubusercontent.com/44063862/82114467-76f35f00-978f-11ea-9a2a-4a263019f63b.png)
+
+Langkah 4: Anda sekarang akan memasuki antara muka "New Simple Volume" dengan mengklik "Seterusnya" dan tentukan ukuran saiz.
+
+![image](https://user-images.githubusercontent.com/44063862/82114513-b1f59280-978f-11ea-92e1-f39cbcb22e8b.png)
+
+Langkah 5: Tetapkan Huruf atau Laluan Pemacu, kemudian format pembahagi ke dalam tetapan asal sistem fail NTFS. Klik "Selesai" untuk menyelesaikan pembuatan partisi baru di Windows 10.
+
+![image](https://user-images.githubusercontent.com/44063862/82114524-c6398f80-978f-11ea-880a-f35dc4c54a33.png)
+
+Kami akan menerangkan cara memasang dan menggunakan edisi dua tetingkap di komputer/komputer riba yang sama:
+
+```
+C:\ ------------> Windows 10 , 8 or 7
+E:\ ------------> Ninjutsu OS
+D:\ ------------> Ninjutsu OS Image
+```
+
+Untuk memasang sistem pengendalian Ninjutsu, taip arahan berikut:
+
+```
+dism /Apply-Image /ImageFile:D:\Sources\install.wim /Index:1 /ApplyDir:E:\
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82114643-8cb55400-9790-11ea-9df7-1a2a4be267ac.png)
+
+Sekarang tunggu sehingga sistem pengendalian Ninjutsu digunakan di pemacu E: anda
+
+Langkah seterusnya, tambahkan Windows yang digunakan pada pemacu E: ke menu boot Windows, gunakan arahan berikut:
+
+```
+bcdboot E:\Windows
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82114733-21b84d00-9791-11ea-97e9-e2ef90c317ba.png)
+
+Now write this command to check defult profile and currnet profile windows
+
+Sekarang tulis arahan ini untuk memeriksa tetingkap profil tetapan asal dan profil semasa
+
+BCDEdit ialah 
+
+BCDEdit is a command-line tool for managing Boot Configuration Data (BCD).
+
+BCD files provide a store that is used to describe boot applications and boot application settings.
+
+BCDEdit can be used for a variety of purposes, including creating new stores, modifying existing stores, adding boot menu options, and so on.
+
+You’ll need administrative privileges to use BCDEdit to modify BCD
+
+open your cmd as administrator
+
+```
+bcdedit 
+```
+Boot Options Identifiers :
+
+```
+{default} device partion E:  (Ninjutso OS)
+
+{current} device partion C: (your current system )
+```
 
 
 
