@@ -435,4 +435,5 @@ Ikuti gambar yang ditunjukkan di bawah
 
 
 
-**© AdaniKamal**
+
+Alihan bahasa oleh **_Adani Kamal_**
