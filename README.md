@@ -1,6 +1,6 @@
-# Documentasi
+# Dokumentasi
 
-Alih ke Bahasa Melayu. Website asal adalah dalam Bahasa Inggeris boleh didapati disini **https://ninjutsu-os.github.io/docs/**
+Alihan ke Bahasa Melayu. Website asal adalah dalam Bahasa Inggeris boleh didapati disini **https://ninjutsu-os.github.io/docs/**
 
 ## Ninjutsu OS
 
@@ -91,7 +91,13 @@ shasum -a 256 Ninjutsu-v1.0.iso
 
 ## Panduan pengguna
 
+**Untuk permulaan**
 
+Keperluan Sistem Minimum:
+
+* CPU : Intel/AMD Prosesor "Dual core" 
+* RAM : 2 GB of RAM DDR3/DDR4
+* Storan : 60 GB ruang cakera keras
 
 
 
