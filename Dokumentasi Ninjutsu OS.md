@@ -433,7 +433,338 @@ Ikuti gambar yang ditunjukkan di bawah
 
 ![image](https://user-images.githubusercontent.com/44063862/82116011-0cdfb780-9799-11ea-923f-d1d8c6cd31ca.png)
 
+## Memasang Docker untuk Windows dan memasang Kali linux:
 
+Docker membantu anda mempunyai persekitaran di mana kita boleh mempunyai alat yang berbeza tanpa harus mempunyai masalah dengan perpustakaan atau pergantungan yang berbeza yang memerlukan alat tertentu.
 
+Kini menggunakan Docker untuk menjalankan Alat Keselamatan Siber semakin popular.
+
+Untuk menggunakan docker di komputer anda, anda haruslah:
+
+1) Aktifkan Hyper-V, secara tetapan asal, sistem pengendalian Ninjutsu telah aktifkan "Hyper-V".
+
+2) Aktifkan Virtualisasi Intel VT-X/AMD pada VMware/VirtualBox dan PC.
+
+Anda harus sedar bahawa Docker memerlukan sambungan perkakasan maya VT-X/AMD-v untuk diaktifkan sebelum anda dapat menjalankan sebarang kontena.
+
+Bergantung pada komputer anda, anda mungkin perlu menghidupkan semula dan mengaktifkannya di BIOS anda.
+
+Anda boleh memeriksa apakah VT-X/AMD-v diaktifkan dengan menjalankan maklumat sistem dari command prompt.
+
+```
+systeminfo
+```
+
+### 1. Aktifkan Hyper-V pada Windows 10 
+
+![image](https://user-images.githubusercontent.com/44063862/82136686-c8a8f180-9842-11ea-992a-26e32d5cca94.png)
+
+### 2. Aktifkan virtualisasi Intel VT-x atau AMD 
+
+Untuk membolehkan virtualisasi Intel VT-X & AMD, buka VMware dan pilih mesin maya yang anda mahu aktifkan virtualisasi Intel/AMD, kemudian klik Edit tetapan mesin maya.
+
+![image](https://user-images.githubusercontent.com/44063862/82136727-16bdf500-9843-11ea-887e-8e61e9cbe62a.png)
+
+Sekarang pilih pilihan Pemproses dan anda akan melihat pilihan Virtualisasi Intel VT-X & AMD di sebelah dan tandakan jika anda mahu. Anda juga boleh membiarkan mesin virtualisasi secara tetapan asal (Automatik), pilihan automatik menggunakan tiga pilihan di sana apabila diperlukan dan matikannya apabila tidak diperlukan.
+
+![image](https://user-images.githubusercontent.com/44063862/82136762-74ead800-9843-11ea-8616-64c40ec57d6e.png)
+
+Aktifkan virtualisasi Intel VT-x/AMD pada VirtualBox.
+
+![image](https://user-images.githubusercontent.com/44063862/82136770-90ee7980-9843-11ea-80da-cafb67d9c959.png)
+
+Di sini, pilih tab Sistem dan pilih tab Pecutan, maka anda dapat lihat dan aktifkan virtualisasi Intel VT-x atau AMD dan klik Ok.
+
+![image](https://user-images.githubusercontent.com/44063862/82136794-c2ffdb80-9843-11ea-8a21-6916ec9bd164.png)
+
+Aktifkan Virtualisasi Intel VT-x/AMD pada komputer/Komputer riba anda.
+
+Ikuti panduan motherboard/Laptop untuk mengaktifkan Intel VT-x/AMD Virtualization dari Bios.
+
+![image](https://user-images.githubusercontent.com/44063862/82136808-f17db680-9843-11ea-8c02-26abda4168c0.png)
+
+Jadi sekarang setelah mengaktifkan virtualisasi Intel VT-x atau AMD di Vmware/VirtualBox dan komputer anda, kita akan mula memasang Docker.
+
+## Memasang Docker
+
+Anda boleh muat turun Docker untuk Windows:
+
+```
+choco install docker-desktop
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82136835-63ee9680-9844-11ea-9a5e-4fd0f6eaea51.png)
+
+Sekiranya semuanya berfungsi seperti yang diharapkan, anda akan melihat senarai kontena kosong yang sedang berjalan.
+
+### Memasang Kali Linux daripada Docker
+
+Kita semua sudah mengetahui kali Linux mempunyai pelbagai alat yang berguna untuk menjalankan tugas yang berbeza, tetapi kita juga mempunyai docker untuk menggunakan kali.
+
+Menyediakan sistem pengendalian Docker Kali Linux :
+
+```
+docker pull kalilinux/kali-rolling
+docker run -t -i kalilinux/kali-rolling /bin/bash
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82136884-1aeb1200-9845-11ea-9bcc-ca374009a101.png)
+
+Sekarang saya akan memasang Metasploit, nmap dan sqlmap pada Kali Linux.
+
+```
+apt-get update && apt-get install metasploit-framework nmap sqlmap
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82136894-43730c00-9845-11ea-9313-62107e06eae9.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82136896-4837c000-9845-11ea-9619-f43cf35211e4.png)
+
+Cara hapuskan kontena Docker Kali Linux dari komputer anda:
+
+Anda boleh mendapatkan senarai semua kontena dengan menyerahkan bendera -a ke perintah ls kontena docker:
+
+```
+docker container ls -a
+```
+
+Hasilnya akan kelihatan seperti ini:
+
+```
+C:\Users\Administrator\Desktop>docker container ls -a
+CONTAINER ID    IMAGE                    COMMAND          CREATED             STATUS                    PORTS          NAMES
+2e89361f5005    kalilinux/kali-rolling   "/bin/bash"      54 minutes ago      Exited (130) 1 second ago                vibrant_meitner
+```
+
+Setelah anda mengetahui ID Kontena dari kontena yang ingin anda padamkan, hantarkannya ke docker kontena perintah rm. Sebagai contoh, untuk membuang dua kontena pertama yang disenaraikan dalam hasil di atas jalankan:
+
+```
+docker container rm 2e89361f5005
+```
+
+Kaedah dan contoh lain cara membuang Docker:
+
+```
+# docker ps -a
+docker ps -a    
+CONTAINER ID        IMAGE               COMMAND                CREATED             STATUS              PORTS               NAMES
+d1c01c8eb336        ubuntu:14.04        "/bin/bash"            5 seconds ago       Exited (0) 3 seconds ago                ubuntu
+df7834f86c78        debian:stable       "/bin/bash"            10 seconds ago      Up 9 seconds                            debian       
+9bdd9d49a75b        mongo:3             "/entrypoint.sh mong   18 minutes ago      Up 18 minutes       27017/tcp           mongodb  
+774b02c9c51a        oraclelinux:7       "/bin/bash"            27 minutes ago      Up 27 minutes                           oracle7
+
+docker rm --force debian
+docker rm --force mongodb
+docker rm --force ubuntu
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82137032-b3ce5d00-9846-11ea-9c49-352a8e14ca9c.png)
+
+Untuk memeriksa saiz Docker:
+
+```
+C:\Users\Administrator\Desktop>docker image ls
+REPOSITORY                   TAG                 IMAGE ID            CREATED             SIZE
+ctfd/ctfd                    latest              ba8fec4b9a20        2 days ago          500MB
+ctfwiki/ctf-wiki             latest              a4ad75128371        5 days ago          195MB
+kalilinux/kali-rolling       latest              d88b418fb1f9        6 days ago          114MB
+parrotsec/security           latest              35cfd692bb97        2 weeks ago         4.71GB
+pyaillet/ctf-tools           latest              f57c8c381e52        6 months ago        992MB
+simplysecurity/simplyemail   latest              58c90bda30f4        2 years ago         684MB
+```
+
+### Memasang sistem pengendalian Parrot pada sistem pengendalian Ninjutsu:
+
+Repositori [Parrot](https://hub.docker.com/u/parrotsec)
+
+Anda boleh memasang alat yang berbeza tanpa perlu ada masalah dengan perpustakaan atau pergantungan yang berbeza,
+
+```
+docker pull parrotsec/security
+docker run -ti --network host parrotsec/security
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82137077-47a02900-9847-11ea-934f-09d2af4368e7.png)
+
+### Memasang alat tunggal SimplyEmail pada sistem pengendalian Ninjutsu:
+
+```
+docker pull simplysecurity/simplyemail
+docker run -ti simplysecurity/simplyemail -h
+docker run -ti simplysecurity/SimplyEmail.py -all -e cybersyndicates.com
+or in verbose
+
+docker run -ti simplysecurity/SimplyEmail.py -all -v -e cybersyndicates.com
+or in verbose and no "Scope"
+
+    docker run -ti simplysecurity/SimplyEmail.py -all -v -e cybersyndicates.com -s
+
+or with email verification
+
+    docker run -ti simplysecurity/SimplyEmail.py -all -v -verify -e cybersyndicates.com 
+
+or with email verification & Name Creation
+
+    docker run -ti simplysecurity/SimplyEmail.py -all -v -verify -n -e cybersyndicates.com 
+
+or json automation
+
+    docker run -ti simplysecurity/SimplyEmail.py -all -e cybersyndicates.com --json cs-json.txt
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82137103-86ce7a00-9847-11ea-8785-a789d08644c3.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82137105-8a620100-9847-11ea-93ca-410fe688c29e.png)
+
+### Memasang alat CTF:
+
+```
+docker pull zardus/ctf-tools
+docker run -ti zardus/ctf-tools
+```
+
+![image](https://user-images.githubusercontent.com/44063862/82137120-aebddd80-9847-11ea-9e2c-c17ce51ba592.png)
+
+![image](https://user-images.githubusercontent.com/44063862/82137121-b2516480-9847-11ea-9b77-b82fcfec24db.png)
+
+Docker lain yang juga sangat berguna:
+
+* https://hub.docker.com/r/aaaguirrep/pentest
+
+**Kali Linux**
+
+```
+docker pull kalilinux/kali-rolling
+docker run -t -i kalilinux/kali-rolling /bin/bash
+```
+
+**Parrot**
+
+```
+docker pull parrotsec/parrot-core
+docker run -t -i parrotsec/parrot-core /bin/bash
+```
+
+**Flan vulnerability scanner** [Nmap-vulners](https://github.com/cloudflare/flan)
+
+**Metasploit framework**
+
+```
+docker pull remnux/metasploit
+docker run -t -i remnux/metasploit /bin/bash
+```
+
+**SQLMap**
+
+```
+docker pull paoloo/sqlmap
+docker run -it paoloo/sqlmap --url http://localhost
+```
+
+**W3AF vulnerability scanner**
+
+```
+docker pull andresriancho/w3af
+docker run -t -i kalilinux/kali-rolling /bin/bash
+```
+
+**Amass**
+
+```
+docker build -t amass https://github.com/OWASP/Amass.git
+docker run -v OUTPUT_DIR_PATH:/.config/amass/ amass enum --list
+```
+
+**Sherlock**
+
+```
+docker build -t mysherlock-image .
+docker run --rm -t mysherlock-image user123
+docker run --rm -t -v "$PWD/results:/opt/sherlock/results" mysherlock-image -o /opt/sherlock/results/text.txt user123
+```
+
+## Docker Notes
+
+**Senarai arahan CLI Docker**
+
+```
+docker
+docker container --help
+```
+
+**Memaparkan maklumat dan versi Docker**
+
+```
+docker --version
+docker version
+docker info
+```
+
+**Mencari Docker**
+
+```
+docker search [search term]
+docker search pentest
+docker search centos
+```
+
+**Bina Docker image daripada Dockerfiles**
+
+```
+docker build -t <image name>:<tag> <file path of Dockerfile>
+```
+
+Pilihan:
+
+Pilihan -t option adalah untuk spesifikkan nama atau tag "Image" (Jika tag tidak dispesifikkan, tetapan asal iaitu "terkini" akan digunakan)
+
+Contoh: docker build -t nginx
+
+**Menjalankan Docker**
+
+```
+docker run hello-world
+```
+
+**Senarai Docker**
+
+```
+docker images
+docker image ls
+```
+
+Pilihan:
+
+* **-quite** = pilihan ini untuk hanya menunjukkan ID "Image Dokcker"
+* **-filter** = pilihan ini untuk menyaring image berdasarkan keadaan tertentu (contoh: –filter = dangling = true)
+
+```
+docker ps -a               # Lists containers (and tells you which images they are spun from)
+docker rm <container_id>   # Removes a container
+docker rmi <image_id>      # Removes an image 
+docker rmi -f <image_id>   # Forces removal of image even if it is referenced in multiple repositories, 
+                           # i.e. same image id given multiple names/tags 
+                           # Will still fail if there is a docker container referencing image
+```
+
+* Senarai kontena Docker (berjalan, -all, semuanya dalam mod senyap)
+
+```
+docker container ls
+docker container ls –all
+docker container ls -aq
+```
+
+* Buang Docker images
+
+```
+docker rmi {image-id || image-name}
+```
+
+* Buang kontena Docker
+
+```
+docker rm {container-id} (no need to enter all id)
+```
 
 Alihan bahasa oleh **_Adani Kamal_**
